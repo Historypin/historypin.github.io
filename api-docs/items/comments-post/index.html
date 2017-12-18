@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Post Comment - Historypin API</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Historypin API</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/auth/index.html">Authenctication</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../gallery/index.html">Gallery</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../map/index.html">Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pinner/index.html">Pinner (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../comments/index.html">Comments</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="index.html">Post Comment</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../users/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../users/edit/index.html">Edit (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../collections/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/rss/index.html">RSS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/community_posts/index.html">Community Posts</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/save/index.html">Save (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Places <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../places/details/index.html">Details</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../listings/index.html">Listings</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../bulk/index.html">Bulk Uploaders</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../comments/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../users/details/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#posting-a-comments">Posting a Comments</a></li>
+        
+            <li><a href="#url">URL</a></li>
+        
+            <li><a href="#postdata">Postdata</a></li>
+        
+            <li><a href="#example-explore-gallery-usage">Example Explore Gallery Usage</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="posting-a-comments">Posting a Comments</h1>
+<h2 id="url">URL</h2>
+<p>http://www.localhost.com:8080/en/api/comments/post.json</p>
+<h2 id="postdata">Postdata</h2>
+<ul>
+<li>item_id (integer, required) - A value representing the Item Identification Number (ID)</li>
+<li>copy (string, required) - Comment text</li>
+</ul>
+<h2 id="example-explore-gallery-usage">Example Explore Gallery Usage</h2>
+<p><a href="https://www.historypin.org/en/api/oreo/pin/get_gallery.json?bounds=39.179422,19.928202,45.987757,26.618876&amp;sort=popular&amp;paging=1">https://www.historypin.org/en/api/oreo/pin/get_gallery.json?bounds=39.179422,19.928202,45.987757,26.618876&amp;sort=popular&amp;paging=1</a></p>
+<pre><code class="json">{
+    &quot;comment&quot;:
+    {
+        &quot;video_url&quot;     : &quot;&quot;,
+        &quot;date_created&quot;  : &quot;May 25, 2016, 10:32 a.m.&quot;,
+        &quot;date_formated&quot; : &quot;said now&quot;,
+        &quot;copy&quot;          : &quot;Here is a new comment for the api&quot;,
+        &quot;user_image&quot;    : &quot;/channels/img/867/logo/1/dim/50x50/crop/1/&quot;,
+        &quot;user_name&quot;     : &quot;Sasho&quot;,
+        &quot;user_url&quot;      : &quot;/en/person/867&quot;
+    }
+
+}
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

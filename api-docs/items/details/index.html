@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Details - Historypin API</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Historypin API</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/auth/index.html">Authenctication</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li class="active">
+    <a href="index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../gallery/index.html">Gallery</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../map/index.html">Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pinner/index.html">Pinner (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../comments/index.html">Comments</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../comments-post/index.html">Post Comment</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../users/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../users/edit/index.html">Edit (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../collections/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/rss/index.html">RSS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/community_posts/index.html">Community Posts</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/save/index.html">Save (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Places <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../places/details/index.html">Details</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../listings/index.html">Listings</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../bulk/index.html">Bulk Uploaders</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../../api/auth/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../gallery/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#item-details">Item Details</a></li>
+        
+            <li><a href="#url">URL</a></li>
+        
+            <li><a href="#parameters">Parameters</a></li>
+        
+            <li><a href="#example-json">Example JSON</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="item-details">Item Details</h1>
+<p>This API call returns the metadata associated with a Pin, the primary data object within the Historypin repository. This data structure includes everything that we store about Pins. This call also includes enough information to build the full user interface for a Pin, which includes some information about the Collections which this Pin is associated with (or "Repinned" to).</p>
+<h2 id="url">URL</h2>
+<p>http://www.historypin.org/en/api/pin/get.json{?parameters}</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>id (integer, required) - A value representing the Item Identification Number (ID)</li>
+</ul>
+<h2 id="example-json">Example JSON</h2>
+<p><a href="http://www.historypin.org/en/api/pin/get.json?id=160180">http://www.historypin.org/en/api/pin/get.json?id=160180</a></p>
+<pre><code class="json">{
+    &quot;id&quot;                : 160180,
+    &quot;caption&quot;           : &quot;Bulgarian Army Theater&quot;,
+    &quot;description&quot;       : &quot;This is a photo of the famous Bulgarian Army Theater .&quot;,
+    &quot;pinner_type&quot;       : &quot;photo&quot;,
+    &quot;type&quot;              : &quot;photo&quot;,
+    &quot;type_id&quot;           : 0,
+    &quot;times_viewed&quot;      : 118,
+    &quot;times_favourited&quot;  : 0,
+    &quot;order_index&quot;       : 0,
+
+    &quot;display&quot;           : {
+        &quot;content&quot;   : &quot;/services/thumb/phid/160180/dim/1000x1000/quality/90/&quot;,
+        &quot;class&quot;     : &quot;image-pin&quot;
+    },
+
+    &quot;oembeded&quot;          : false,
+    &quot;date&quot;              : &quot;2014-02-02&quot;,
+    &quot;date_added&quot;        : &quot;Mon 03 Jun 2013&quot;,
+    &quot;date_taken&quot;        : &quot;2 February 2014&quot;,
+    &quot;date_taken_range&quot;  : &quot;2014:2014&quot;,
+
+    &quot;location&quot; : {
+        &quot;lat&quot;               : 42.694653,
+        &quot;lng&quot;               : 23.328998,
+        &quot;zoom&quot;              : 15,
+        &quot;range&quot;             : 0,
+        &quot;raw&quot;               : &quot;&quot;,
+        &quot;geo_tags&quot;          : &quot;ulitsa &amp;quot;Georgi. S. Rakovski&amp;quot; 98-100, 1000 Sofia, Bulgaria&quot;,
+        &quot;for_streetview&quot;    : true,
+        &quot;streetview&quot; :
+        {
+
+            &quot;heading&quot;   : -448.966,
+            &quot;pitch&quot;     : -0.642857,
+            &quot;zoom&quot;      : 0.0,
+            &quot;opacity&quot;   : 1,
+            &quot;params&quot;    : {&quot;i&quot;:{&quot;x&quot;:325,&quot;y&quot;:207,&quot;w&quot;:480,&quot;h&quot;:322},&quot;c&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:480,&quot;h&quot;:322}}
+        }
+    },
+
+    &quot;geo_tags&quot;          : &quot;ulitsa &amp;quot;Georgi. S. Rakovski&amp;quot; 98-100, 1000 Sofia, Bulgaria&quot;,
+    &quot;license_key&quot;       : &quot;no-copyright&quot;,
+    &quot;license&quot;           : &quot;No known copyright restrictions.&quot;,
+    &quot;author&quot;            : &quot;Unknown&quot;,
+    &quot;link&quot;              : &quot;http://novini.bg&quot;,
+    &quot;repository&quot;        : &quot; Test&quot;,
+    &quot;notes&quot;             : &quot;Test Notes&quot;,
+    &quot;rights_statement&quot;  : &quot; Test&quot;,
+    &quot;user_id&quot;           : 35019,
+    &quot;user_image&quot;        : &quot;/resources/avatars/200x200/avatar_3.png&quot;,
+    &quot;user_name&quot;         : &quot;Gabriela Ananieva&quot;,
+    &quot;edit_url&quot;          : &quot;/project/1-historypin/upload-item/pin/phid/160180/edit/1/?from=/en/explore/pin/160180&quot;,
+    &quot;contact_us&quot;        : &quot;/contact-us/?report/#!/dialog:160180&quot;,
+    &quot;count_comments&quot;    : &quot;2&quot;,
+    &quot;tags&quot;              : [
+            { &quot;id&quot;: 1734820, &quot;text&quot;: &quot;theater&quot; },
+            { &quot;id&quot;: 1734822, &quot;text&quot;: &quot;theatre&quot; },
+            { &quot;id&quot;: 2771935, &quot;text&quot;: &quot;bulgarian army&quot; }
+    ],
+
+    &quot;remote&quot;: {
+        &quot;id&quot; : &quot;/2021613/tracks_48226240&quot;
+    },
+
+    &quot;places&quot;            : [
+        {
+            &quot;id&quot;                    : 293,
+            &quot;title&quot;                 : &quot;Bulgaria&quot;,
+            &quot;slug&quot;                  : &quot;bulgaria&quot;,
+            &quot;path&quot;                  : &quot;bulgaria&quot;,
+            &quot;center&quot;                : &quot;42.7270330000,25.4820355000&quot;,
+            &quot;zoom&quot;                  : &quot;6&quot;,
+            &quot;parent_title&quot;          : &quot;&quot;
+        },
+
+        {
+            &quot;id&quot;                    : 1244,
+            &quot;title&quot;                 : &quot;Sofia&quot;,
+            &quot;slug&quot;                  : &quot;sofia&quot;,
+            &quot;path&quot;                  : &quot;bulgaria/sofia&quot;,
+            &quot;center&quot;                : &quot;42.6543950000,23.3648820000&quot;,
+            &quot;zoom&quot;                  : &quot;10&quot;,
+            &quot;parent_title&quot;          : &quot;Bulgaria&quot;
+        }
+    ],
+
+    &quot;repinned_projects&quot; : [
+            {
+                &quot;id&quot;            : &quot;7580&quot;,
+                &quot;node_type&quot;     : &quot;project&quot;,
+                &quot;class&quot;         : &quot;&quot;,
+                &quot;card_tpl&quot;      : &quot;/en/api/cards/project.tpl&quot;,
+
+                &quot;position&quot;      : &quot;&quot;,
+
+                &quot;title&quot;         : &quot;Gabriela Ananieva\u0027s Collection&quot;,
+                &quot;desc&quot;          : &quot;&quot;,
+                &quot;slug&quot;          : &quot;gabriela-ananieva-s-collection&quot;,
+                &quot;pins_count&quot;    : &quot;1&quot;,
+                &quot;parent&quot;        : &quot;&quot;,
+                &quot;times_viewed&quot;  : 757,
+                &quot;on_explore&quot;    : 1,
+
+                &quot;sponsored&quot;     : {  },
+                    &quot;owner&quot; :
+                    {
+                        &quot;id&quot;    : &quot;35019&quot;,
+                        &quot;name&quot;  : &quot;Gabriela Ananieva&quot;,
+                        &quot;image&quot; : &quot;//resources-cdn.historypin.org/resources/avatars/200x200/avatar_3.png&quot;
+                    },
+
+                &quot;images&quot;:
+                [
+                    { &quot;id&quot;: &quot;160180&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/160180/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; }
+                ]
+
+            },
+
+            {
+                &quot;id&quot;            : &quot;18986&quot;,
+                &quot;node_type&quot;     : &quot;project&quot;,
+                &quot;class&quot;         : &quot;&quot;,
+                &quot;card_tpl&quot;      : &quot;/en/api/cards/project.tpl&quot;,
+                &quot;position&quot;      : &quot;&quot;,
+                &quot;title&quot;         : &quot;Theaters in Bulgaria&quot;,
+                &quot;desc&quot;          : &quot;Collection for famous theaters in Bulgaria&quot;,
+                &quot;slug&quot;          : &quot;theaters-in-bulgaria&quot;,
+                &quot;pins_count&quot;    : &quot;2&quot;,
+                &quot;parent&quot;        : &quot;&quot;,
+                &quot;times_viewed&quot;  : 241,
+                &quot;on_explore&quot;    : 1,
+                &quot;sponsored&quot;     : {  },
+
+                &quot;owner&quot; :
+                {
+                    &quot;id&quot;    : &quot;35019&quot;,
+
+                    &quot;name&quot;  : &quot;Gabriela Ananieva&quot;,
+                    &quot;image&quot; : &quot;//resources-cdn.historypin.org/resources/avatars/200x200/avatar_3.png&quot;
+                },
+
+                &quot;images&quot;:
+                [
+                    { &quot;id&quot;: &quot;160180&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/160180/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; }
+                ]
+
+            },
+
+            {
+                &quot;id&quot;            : &quot;22175&quot;,
+                &quot;node_type&quot;     : &quot;tour&quot;,
+                &quot;class&quot;         : &quot;&quot;,
+                &quot;card_tpl&quot;      : &quot;/en/api/cards/tour.tpl&quot;,
+                &quot;position&quot;      : &quot;&quot;,
+                &quot;title&quot;         : &quot;Beautiful buildings in Bulgaria&quot;,
+                &quot;desc&quot;          : &quot;Tour about beautiful buildings in Bulgaria&quot;,
+                &quot;slug&quot;          : &quot;beautiful-buildings-in-bulgaria&quot;,
+                &quot;pins_count&quot;    : &quot;2&quot;,
+                &quot;parent&quot;        : &quot;&quot;,
+                &quot;times_viewed&quot;  : 504,
+                &quot;on_explore&quot;    : 1,
+                &quot;sponsored&quot;     : {  },
+
+                    &quot;owner&quot; :
+                    {
+                        &quot;id&quot;    : &quot;35019&quot;,
+
+                        &quot;name&quot;  : &quot;Gabriela Ananieva&quot;,
+                        &quot;image&quot; : &quot;//resources-cdn.historypin.org/resources/avatars/200x200/avatar_3.png&quot;
+                    },
+
+                &quot;images&quot;:
+                [
+                    { &quot;id&quot;: &quot;160180&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/160180/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                    { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; }
+                ]
+            }
+    ]
+}
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/api/auth/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/items/details/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/items/gallery/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/items/map/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/items/pinner/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/items/delete/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/items/comments/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/items/comments-post/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/users/details/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/users/edit/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/collections/details/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/collections/rss/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/collections/community_posts/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/collections/save/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/collections/delete/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/places/details/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/listings/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/bulk/index.html</loc>
+     <lastmod>2017-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

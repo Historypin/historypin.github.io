@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Gallery - Historypin API</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Historypin API</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/auth/index.html">Authenctication</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="index.html">Gallery</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../map/index.html">Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pinner/index.html">Pinner (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../comments/index.html">Comments</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../comments-post/index.html">Post Comment</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../users/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../users/edit/index.html">Edit (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../collections/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/rss/index.html">RSS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/community_posts/index.html">Community Posts</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/save/index.html">Save (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../collections/delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Places <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../places/details/index.html">Details</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../listings/index.html">Listings</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../bulk/index.html">Bulk Uploaders</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../details/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../map/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#gallery">Gallery</a></li>
+        
+            <li><a href="#url">URL</a></li>
+        
+            <li><a href="#parameters">Parameters</a></li>
+        
+            <li><a href="#example-explore-gallery-usage">Example Explore Gallery Usage</a></li>
+        
+            <li><a href="#user-gallery-content">User gallery content</a></li>
+        
+            <li><a href="#place-gallery-content">Place gallery content</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="gallery">Gallery</h1>
+<p>Gallery content</p>
+<h2 id="url">URL</h2>
+<p>https://www.historypin.org/en/api/{project-path}/pin/get_gallery.json{?parameters}</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>project-path (slugs, required) - A value representing the project slug or a hierarchical path of project slugs.</li>
+<li>search (search) - <a href="../../index.html#search-parameters">Search Parameter (Read More)</a></li>
+<li>sort (string) - possible sortings:<ul>
+<li>-recent - Recently added content first</li>
+<li>date_taken - Oldest content first</li>
+<li>-date_taken - Newest content first</li>
+<li>popular - Most popular content first</li>
+<li>alpha - Title A-Z</li>
+<li>-alpha - Title Z-A</li>
+</ul>
+</li>
+<li>bounds (string) - A value in the form ‘lat_lo,lng_lo,lat_hi,lng_hi’ describing the bounds upon which the returned content is filtered. Where ‘lo’ corresponds to the SW corner of the bounding box, while ‘hi’ corresponds to the NE corner of that box.</li>
+<li>date (integer) - A value of integer pairs representing 'year_min:year_max' filtration</li>
+<li>page (integer) - A value representing the current page of served content</li>
+<li>limit (integer, default: 24) - A value representing the content per page served</li>
+</ul>
+<h2 id="example-explore-gallery-usage">Example Explore Gallery Usage</h2>
+<p><a href="https://www.historypin.org/en/api/oreo/pin/get_gallery.json?bounds=39.179422,19.928202,45.987757,26.618876&amp;sort=popular&amp;paging=1">https://www.historypin.org/en/api/oreo/pin/get_gallery.json?bounds=39.179422,19.928202,45.987757,26.618876&amp;sort=popular&amp;paging=1</a></p>
+<pre><code class="json">{
+    &quot;limit&quot; : 24,
+    &quot;count&quot; : 4,
+    &quot;page&quot;  : 1,
+
+    &quot;results&quot;: [
+
+        {
+            &quot;node_type&quot;         : &quot;add-pin-small&quot;,
+            &quot;class&quot;             : &quot;add-first-pin small&quot;,
+            &quot;allow_add_pin_text&quot;: false,
+            &quot;add_pin_text&quot;      : &quot;&quot;
+        },
+
+        {
+            &quot;node_type&quot;     : &quot;project-about&quot;,
+            &quot;class&quot;         : &quot;card-about&quot;,
+            &quot;id&quot;            : 30,
+            &quot;leaders&quot;       : 
+            [
+
+            ],
+            &quot;project_desc&quot;  : &quot;Please add a little information about your project.&quot;
+        },
+
+        {
+            &quot;node_type&quot;     : &quot;rss&quot;,
+            &quot;class&quot;         : &quot;&quot;,
+            &quot;url&quot;           : &quot;http://beyondthetrenches.co.uk&quot;,
+            &quot;blog_title&quot;    : &quot;BEYOND THE TRENCHES&quot;,
+            &quot;title&quot;         : &quot;Gunnersbury commemorates Indian Army Heroes&quot;,
+            &quot;description&quot;   : &quot;An exhibition charting the importance of soldiers from India to the Allies’ efforts in the First World War is to be displayed at the Gunnersbury Park café from Friday 31 July. More than a million Indian soldiers were deployed overseas in the Great War, sharing in the horrors of the trenches on the Western Front, and other theatres of war around the globe. They were the first to repel the Germans at Ypres in 1914 and, in the course of the four-year conflict, 74,000 gave their lives in service for king and country. During the war, Indian troops earned 9,200 decorations including 11 Victoria Crosses – the highest honour that can be bestowed on a soldier serving with the British military reserved for those who display extreme bravery. The exhibition, which will be on display at the café in Gunnersbury Park, in Gunnersbury Avenue, until Thursday 27 August, is on a whistle-stop tour of the UK from its base at the University of Kent in Canterbury as part of commemorations marking the centenary of the First World War. The café is hosting the exhibition while the Gunnersbury Park Museum is closed for the first phase of its £21million restoration. Reproductions of 100-year-old photographs are being lent to the borough by Gateways to the First World War, a centre set up thanks to cash from the Arts and Humanities Research Council. Councillor Ed Mayne, Hounslow Council's Cabinet Member for Public Health and Leisure, said: “The Indian Army paid such a vital role in the First World War, but 100 years after the Guns of August rang out across Europe, their service to the nation seems to have been lost to the annals of time, which is terrible. “We are very pleased to be hosting this exhibition and I hope many people will have the opportunity to see it. There are some fascinating snapshots of military life and what it must have been like for these soldiers to travel so far to fight in a conflict so far removed from their own experiences.” Councillor Julian Bell, Leader of Ealing Council, said: “It is so important to remember that it was a world war and there were brave soldiers from across the globe without whose efforts and sacrifice the war may not have been won. We have many generations of people living in the borough with roots in the Indian subcontinent and so this exhibition may even tell the stories of some of their relatives.” For further information visit www.gatewaysfww.org.uk or email gateways@kent.ac.uk The Gunnersbury Park café is open between 9am and 6pm, 7 days a week during the summer. The photo shows a woman pinning a flower on a passing Indian soldier. More photos are available on request.&quot;,
+            &quot;link&quot;          : &quot;http://beyondthetrenches.co.uk/gunnersbury-commemorates-indian-army-heroes/&quot;,
+            &quot;published&quot;     : &quot;17 July 2015&quot;
+        },
+
+        {
+            &quot;node_type&quot;         : &quot;pin&quot;,
+            &quot;url&quot;               : &quot;/en/oreo/pin/997331&quot;,
+            &quot;class&quot;             : &quot;&quot;,
+
+            &quot;id&quot;                : 997331,
+            &quot;type&quot;              : &quot;video&quot;,
+            &quot;pin_class&quot;         : &quot;&quot;,
+            &quot;image&quot;             : &quot;//photos-cdn.historypin.org/services/thumb/phid/997331/dim/611x315/quality/80/&quot;,
+            &quot;media_url&quot;         : &quot;https://www.youtube.com/watch?v=LAvHHTt2czU&amp;amp;amp;list=PL56D4F0CEC7279B40&amp;amp;amp;index=5&quot;,
+            &quot;text&quot;              : &quot;&quot;,
+            &quot;caption&quot;           : &quot;JFK on the Separation of Church and State&quot;,
+            &quot;user&quot;              : { &quot;id&quot;: 49127, &quot;url&quot;: &quot;/channels/view/49127/&quot;,&quot;name&quot;: &quot;Rawr&quot;, &quot;image&quot;: &quot;/channels/img/49127/logo/1/dim/50x50/crop/1/&quot; },
+            &quot;desc&quot;              : &quot;Senator John F. Kennedy speaking before the Greater Houston Ministerial Association at the Rice Hotel in Houston, Texas on September 12, 1960.&quot;,
+            &quot;project&quot;           : &quot;Project\u0027s for Quality Assurance&quot;,
+            &quot;streetview&quot;        : &quot;&quot;,
+            &quot;counts&quot;:
+            {
+                &quot;viewed&quot;    : 2,
+                &quot;comments&quot;  : 0
+            },
+
+            &quot;date&quot;              : &quot;12 September 1960&quot;,
+            &quot;complete&quot;          : 1,
+            &quot;edit_url&quot;          : &quot;/project/30-oreo/upload-video/pin/phid/997331/edit/1/&quot;,
+            &quot;is_owned_by_user&quot;  : 1
+
+        }
+
+    ]
+}
+</code></pre>
+
+<h2 id="user-gallery-content">User gallery content</h2>
+<ul>
+<li>user (integer) - A value representing the User Identification Number (ID)</li>
+</ul>
+<p><a href="https://www.historypin.org/en/api/pin/get_gallery.json?bounds=-78.26642,-69.067622,83.683324,145.033941&amp;sort=popular&amp;user=60895">https://www.historypin.org/en/api/pin/get_gallery.json?bounds=-78.26642,-69.067622,83.683324,145.033941&amp;sort=popular&amp;user=60895</a></p>
+<pre><code class="json">
+{
+    &quot;limit&quot; : 24,
+    &quot;count&quot; : 1555,
+    &quot;page&quot;  : 1,
+
+    &quot;results&quot;: [
+
+        {
+            &quot;node_type&quot;         : &quot;pin&quot;,
+            &quot;url&quot;               : &quot;/en/explore/pin/298211&quot;,
+            &quot;class&quot;             : &quot;&quot;,
+
+            &quot;id&quot;                : 298211,
+            &quot;type&quot;              : &quot;video&quot;,
+            &quot;pin_class&quot;         : &quot;&quot;,
+            &quot;image&quot;             : &quot;//photos-cdn.historypin.org/services/thumb/phid/298211/dim/611x315/quality/80/&quot;,
+            &quot;media_url&quot;         : &quot;https://vimeo.com/120561983&quot;,
+            &quot;text&quot;              : &quot;&quot;,
+            &quot;caption&quot;           : &quot;BDDA Congress, Brighton, 1953&quot;,
+            &quot;user&quot;              : { &quot;id&quot;: 60895, &quot;url&quot;: &quot;/channels/view/60895/&quot;,&quot;name&quot;: &quot;British Deaf Association&quot;, &quot;image&quot;: &quot;/channels/img/60895/logo/1/dim/50x50/crop/1/&quot; },
+            &quot;desc&quot;              : &quot;Bowls, ice cream, drama and kilts on the south coast as the British Deaf Association head for Brighton in Coronation year.Shot in both colour and black and white, this film shows the British Deaf Association (then called the British Deaf ...&quot;,
+            &quot;project&quot;           : &quot;SHARE: The Deaf Visual Archive&quot;,
+            &quot;streetview&quot;        : &quot;&quot;,
+            &quot;counts&quot;:
+            {
+                &quot;viewed&quot;    : 293,
+                &quot;comments&quot;  : 1
+            },
+
+            &quot;date&quot;              : &quot;1953&quot;,
+            &quot;complete&quot;          : 1,
+            &quot;edit_url&quot;          : &quot;/project/1-historypin/upload-video/pin/phid/298211/edit/1/&quot;,
+            &quot;is_owned_by_user&quot;  : 1
+
+        },
+
+        {
+            &quot;node_type&quot;         : &quot;pin&quot;,
+            &quot;url&quot;               : &quot;/en/explore/pin/298204&quot;,
+            &quot;class&quot;             : &quot;&quot;,
+
+            &quot;id&quot;                : 298204,
+            &quot;type&quot;              : &quot;video&quot;,
+            &quot;pin_class&quot;         : &quot;&quot;,
+            &quot;image&quot;             : &quot;//photos-cdn.historypin.org/services/thumb/phid/298204/dim/611x315/quality/80/&quot;,
+            &quot;media_url&quot;         : &quot;https://vimeo.com/121230694&quot;,
+            &quot;text&quot;              : &quot;&quot;,
+            &quot;caption&quot;           : &quot;BDDA Summer School, Harlech 1970&quot;,
+            &quot;user&quot;              : { &quot;id&quot;: 60895, &quot;url&quot;: &quot;/channels/view/60895/&quot;,&quot;name&quot;: &quot;British Deaf Association&quot;, &quot;image&quot;: &quot;/channels/img/60895/logo/1/dim/50x50/crop/1/&quot; },
+            &quot;desc&quot;              : &quot;Highlights from one of the BDDA’s popular Summer Schools, taking place at Coleg Harlech in July 1970. The clip opens with general views of the audience in auditorium of Coleg Harlech before they depart on a coach trip. Alan Haythorthwaite ...&quot;,
+            &quot;project&quot;           : &quot;SHARE: The Deaf Visual Archive&quot;,
+            &quot;streetview&quot;        : &quot;&quot;,
+            &quot;counts&quot;:
+            {
+                &quot;viewed&quot;    : 241,
+                &quot;comments&quot;  : 0
+            },
+
+            &quot;date&quot;              : &quot;4 July 1970&quot;,
+            &quot;complete&quot;          : 1,
+            &quot;edit_url&quot;          : &quot;/project/1-historypin/upload-video/pin/phid/298204/edit/1/&quot;,
+            &quot;is_owned_by_user&quot;  : 1
+
+        },
+
+        {
+            &quot;node_type&quot;         : &quot;pin&quot;,
+            &quot;url&quot;               : &quot;/en/explore/pin/298215&quot;,
+            &quot;class&quot;             : &quot;&quot;,
+
+            &quot;id&quot;                : 298215,
+            &quot;type&quot;              : &quot;video&quot;,
+            &quot;pin_class&quot;         : &quot;&quot;,
+            &quot;image&quot;             : &quot;//photos-cdn.historypin.org/services/thumb/phid/298215/dim/611x315/quality/80/&quot;,
+            &quot;media_url&quot;         : &quot;https://vimeo.com/120582945&quot;,
+            &quot;text&quot;              : &quot;&quot;,
+            &quot;caption&quot;           : &quot;BDDA Congress, Plymouth, 1962&quot;,
+            &quot;user&quot;              : { &quot;id&quot;: 60895, &quot;url&quot;: &quot;/channels/view/60895/&quot;,&quot;name&quot;: &quot;British Deaf Association&quot;, &quot;image&quot;: &quot;/channels/img/60895/logo/1/dim/50x50/crop/1/&quot; },
+            &quot;desc&quot;              : &quot;The British Deaf Association tours Plymouth in 1962.Members of the British Deaf Association (then called the British Deaf And Dumb Association) descend on Plymouth for their 1962 congress. This film captures them in meetings and then visiting the sights of ...&quot;,
+            &quot;project&quot;           : &quot;SHARE: The Deaf Visual Archive&quot;,
+            &quot;streetview&quot;        : &quot;&quot;,
+            &quot;counts&quot;:
+            {
+                &quot;viewed&quot;    : 196,
+                &quot;comments&quot;  : 0
+            },
+
+            &quot;date&quot;              : &quot;1962&quot;,
+            &quot;complete&quot;          : 1,
+            &quot;edit_url&quot;          : &quot;/project/1-historypin/upload-video/pin/phid/298215/edit/1/&quot;,
+            &quot;is_owned_by_user&quot;  : 1
+
+        }
+
+    ]
+}
+
+</code></pre>
+
+<h2 id="place-gallery-content">Place gallery content</h2>
+<ul>
+<li>places (string) - A value representing the country slug or country/area slug pair.</li>
+</ul>
+<p><a href="https://www.historypin.org/en/api/pin/get_gallery.json?bounds=39.285918,22.130796,46.083204,28.821469&amp;places=bulgaria%2Fsofia&amp;sort=popular">https://www.historypin.org/en/api/pin/get_gallery.json?bounds=39.285918,22.130796,46.083204,28.821469&amp;places=bulgaria%2Fsofia&amp;sort=popular</a></p>
+<pre><code class="json">
+{
+    &quot;limit&quot; : 24,
+    &quot;count&quot; : 115,
+    &quot;page&quot;  : 1,
+
+    &quot;results&quot;: [
+        {
+            &quot;node_type&quot;     : &quot;project&quot;,
+            &quot;class&quot;         : &quot;&quot;,
+
+            &quot;id&quot;            : 3089,
+            &quot;title&quot;         : &quot;Konstantin Dankov\u0027s Collection&quot;,
+            &quot;slug&quot;          : &quot;konstantin-dankov-s-collection-2&quot;,
+            &quot;desc&quot;          : &quot;&quot;,
+            &quot;position&quot;      : &quot;42.459469,23.558648,5&quot;,
+            &quot;pins_count&quot;    : &quot;22&quot;,
+            &quot;sponsored&quot;     : {  },
+            &quot;times_viewed&quot;  : 5014,
+            &quot;on_explore&quot;    : 1,
+
+            &quot;parent&quot;        : &quot;&quot;,
+            &quot;edit_url&quot;      : &quot;/en/konstantin-dankov-s-collection-2/project/edit&quot;,
+
+
+                &quot;owner&quot; :
+                {
+                    &quot;id&quot;    : &quot;12168&quot;,
+                    &quot;url&quot;   : &quot;/channels/view/12168/&quot;,
+                    &quot;name&quot;  : &quot;Konstantin Dankov&quot;,
+                    &quot;image&quot; : &quot;/channels/img/12168/logo/1/dim/50x50/crop/1/&quot;
+                },
+
+
+            &quot;images&quot;:
+            [
+
+                { &quot;id&quot;: &quot;206781&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/206781/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;206678&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/206678/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;205997&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/205997/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;205776&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/205776/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; }
+            ]
+
+        },
+
+        {
+            &quot;node_type&quot;     : &quot;project&quot;,
+            &quot;class&quot;         : &quot;&quot;,
+
+            &quot;id&quot;            : 789,
+            &quot;title&quot;         : &quot;Konstantin Dankov\u0027s Collection&quot;,
+            &quot;slug&quot;          : &quot;konstantin-dankov-s-collection&quot;,
+            &quot;desc&quot;          : &quot;&quot;,
+            &quot;position&quot;      : &quot;42.689263,23.330131,5&quot;,
+            &quot;pins_count&quot;    : &quot;9&quot;,
+            &quot;sponsored&quot;     : {  },
+            &quot;times_viewed&quot;  : 520,
+            &quot;on_explore&quot;    : 1,
+
+            &quot;parent&quot;        : &quot;&quot;,
+            &quot;edit_url&quot;      : &quot;/en/konstantin-dankov-s-collection/project/edit&quot;,
+
+
+                &quot;owner&quot; :
+                {
+                    &quot;id&quot;    : &quot;31&quot;,
+                    &quot;url&quot;   : &quot;/channels/view/31/&quot;,
+                    &quot;name&quot;  : &quot;Konstantin Dankov&quot;,
+                    &quot;image&quot; : &quot;/channels/img/31/logo/1/dim/50x50/crop/1/&quot;
+                },
+
+
+            &quot;images&quot;:
+            [
+
+                { &quot;id&quot;: &quot;988483&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/988483/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;988464&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/988464/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;56056&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/56056/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;56040&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/56040/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; }
+            ]
+
+        },
+
+        {
+            &quot;node_type&quot;     : &quot;project&quot;,
+            &quot;class&quot;         : &quot;&quot;,
+
+            &quot;id&quot;            : 7819,
+            &quot;title&quot;         : &quot;Gabby\u0027s Collection&quot;,
+            &quot;slug&quot;          : &quot;gabby-s-collection&quot;,
+            &quot;desc&quot;          : &quot;&quot;,
+            &quot;position&quot;      : &quot;42.696378,23.346291,5&quot;,
+            &quot;pins_count&quot;    : &quot;1&quot;,
+            &quot;sponsored&quot;     : {  },
+            &quot;times_viewed&quot;  : 519,
+            &quot;on_explore&quot;    : 1,
+
+            &quot;parent&quot;        : &quot;&quot;,
+            &quot;edit_url&quot;      : &quot;/en/gabby-s-collection/project/edit&quot;,
+
+
+                &quot;owner&quot; :
+                {
+                    &quot;id&quot;    : &quot;36038&quot;,
+                    &quot;url&quot;   : &quot;/channels/view/36038/&quot;,
+                    &quot;name&quot;  : &quot;Gabby&quot;,
+                    &quot;image&quot; : &quot;/channels/img/36038/logo/1/dim/50x50/crop/1/&quot;
+                },
+
+
+            &quot;images&quot;:
+            [
+
+                { &quot;id&quot;: &quot;200988&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid/200988/dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; },
+                { &quot;id&quot;: &quot;&quot;, &quot;url&quot;: &quot;//photos-cdn.historypin.org/services/thumb/phid//dim/280x225/crop/1/&quot;, &quot;pin_class&quot;: &quot;&quot;, &quot;media_url&quot;: &quot;&quot; }
+            ]
+
+        }
+
+    ]
+}
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

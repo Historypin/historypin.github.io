@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Listings - Historypin API</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../index.html">Historypin API</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../index.html">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../api/auth/index.html">Authenctication</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../items/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../items/gallery/index.html">Gallery</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../items/map/index.html">Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../items/pinner/index.html">Pinner (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../items/delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../items/comments/index.html">Comments</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../items/comments-post/index.html">Post Comment</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../users/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../users/edit/index.html">Edit (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../collections/details/index.html">Details</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../collections/rss/index.html">RSS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../collections/community_posts/index.html">Community Posts</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../collections/save/index.html">Save (w)</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../collections/delete/index.html">Delete (w)</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Places <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../places/details/index.html">Details</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="index.html">Listings</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../bulk/index.html">Bulk Uploaders</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../places/details/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../bulk/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#listings">Listings</a></li>
+        
+            <li><a href="#url">URL</a></li>
+        
+            <li><a href="#types">Types</a></li>
+        
+            <li><a href="#parameters">Parameters</a></li>
+        
+            <li><a href="#pin-specific-parameters">Pin Specific Parameters</a></li>
+        
+            <li><a href="#user-specific-parameters">User Specific Parameters</a></li>
+        
+            <li><a href="#projects-specific-parameters">Projects Specific Parameters</a></li>
+        
+            <li><a href="#places-specific-parameters">Places Specific Parameters</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="listings">Listings</h1>
+<p>Historypin uses the same feed for most of the listings.</p>
+<h2 id="url">URL</h2>
+<p>http://www.historypin.org/en/api/{project-path}/{TYPE}/listing.json{?parameters}</p>
+<ul>
+<li>project-path (slugs, optional) - A value representing the project slug or a hierarchical path of project slugs.</li>
+</ul>
+<h2 id="types">Types</h2>
+<ul>
+<li>pin</li>
+<li>user</li>
+<li>projects</li>
+<li>places</li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>search (search) - <a href="../index.html#search-parameters">Search Parameter (Read More)</a></li>
+<li>
+<p>sort (string) - possible sortings:</p>
+<ul>
+<li>-recent - Recently added content first</li>
+<li>date_taken - Oldest content first</li>
+<li>-date_taken - Newest content first</li>
+<li>popular - Most popular content first</li>
+</ul>
+</li>
+<li>
+<p>limit (integer, default: 24) - A value representing the content per page served</p>
+</li>
+<li>page (integer) - A value representing the current page of served content</li>
+</ul>
+<h2 id="pin-specific-parameters">Pin Specific Parameters</h2>
+<ul>
+<li>user (integer) - A value representing the User Identification Number (ID)</li>
+<li>places (string) - A value representing the country slug or country/area slug pair.</li>
+</ul>
+<p><a href="http://www.historypin.org/en/api/pin/listing.json?limit=6&amp;page=1&amp;sort=-recent&amp;user=11">http://www.historypin.org/en/api/pin/listing.json?limit=6&amp;page=1&amp;sort=-recent&amp;user=11</a></p>
+<pre><code class="json">{
+    &quot;limit&quot; : 6,
+    &quot;count&quot; : 27,
+    &quot;page&quot;  : 1,
+    &quot;search&quot;: &quot;&quot;,
+    &quot;sort&quot;  : &quot;-recent&quot;,
+
+    &quot;results&quot;: [
+        {
+            &quot;node_type&quot;     : &quot;pin&quot;,
+            &quot;url&quot;           : &quot;/en/explore/pin/66310&quot;,
+            &quot;class&quot;         : &quot;&quot;,
+
+            &quot;id&quot;            : 66310,
+            &quot;type&quot;          : &quot;photo&quot;,
+            &quot;pin_class&quot;     : &quot;&quot;,
+            &quot;image&quot;         : &quot;//photos-cdn.historypin.org/services/thumb/phid/66310/dim/611x315/quality/80/&quot;,
+            &quot;media_url&quot;     : &quot;&quot;,
+            &quot;text&quot;          : &quot;&quot;,
+            &quot;caption&quot;       : &quot;Island Lake Cottage&quot;,
+            &quot;user&quot;          : 
+            {
+                &quot;id&quot;    : 11,
+                &quot;url&quot;   : &quot;/channels/view/11/&quot;,
+                &quot;name&quot;  : &quot;Mary Ellen Daley&quot;,
+                &quot;image&quot; : &quot;/channels/img/11/logo/1/dim/50x50/crop/1/&quot;
+            },
+            &quot;desc&quot;          : &quot;A photo of my cousin Dennis, Me, Arlene, Bruna and cousins Barbara and Bonnie enjoying our time at the cottage. There were many happy times we spent together there.&quot;,
+            &quot;project&quot;       : &quot;Mary Ellen Daley's Collection&quot;,
+            &quot;project_slug&quot;  : &quot;mary-ellen-daley-s-collection&quot;,
+            &quot;streetview&quot;    : &quot;&quot;,
+            &quot;counts&quot;        :
+            {
+                &quot;viewed&quot;    : 24,
+                &quot;comments&quot;  : 0
+            },
+            &quot;complete&quot;      : 1,
+
+            &quot;edit_url&quot;      : &quot;/en/pinner/66310/&quot;,
+            &quot;is_owned_by_user&quot; : 1
+        },
+        ...
+    ]
+}
+</code></pre>
+
+<h2 id="user-specific-parameters">User Specific Parameters</h2>
+<ul>
+<li>places (string) - A value representing the country slug or country/area slug pair.</li>
+</ul>
+<p><a href="http://www.historypin.org/en/api/user/listing.json?limit=24&amp;page=1&amp;search=&amp;sort=most_popular">http://www.historypin.org/en/api/user/listing.json?limit=24&amp;page=1&amp;search=&amp;sort=most_popular</a></p>
+<pre><code class="json">{
+    &quot;limit&quot;     : 24,
+    &quot;count&quot;     : 67565,
+    &quot;page&quot;      : 1,
+    &quot;search&quot;    : &quot;&quot;,
+    &quot;sort&quot;      : &quot;most_popular&quot;,
+
+    &quot;results&quot;: [
+        {
+            &quot;id&quot;                : 11417,
+            &quot;url&quot;               : &quot;/en/person/11417/&quot;,
+            &quot;image&quot;              &quot;/channels/img/11417/logo/1/dim/225x225/crop/1/&quot;,
+            &quot;name&quot;               &quot;SFMTA Photo Archive&quot;,
+            &quot;counts&quot;            :
+            {
+                &quot;pins_count&quot;    : 4085,
+                &quot;times_viewed&quot;  : 34863
+            }
+        },
+        ...
+    ]
+}
+</code></pre>
+
+<h2 id="projects-specific-parameters">Projects Specific Parameters</h2>
+<ul>
+<li>user (integer) - A value representing the Project Identification Number (ID)</li>
+<li>places (string) - A value representing the country slug or country/area slug pair.</li>
+<li>featured (string, optional) - possible values:<ul>
+<li>true</li>
+</ul>
+</li>
+<li>parents (integer, optional) - possible values:<ul>
+<li>1</li>
+</ul>
+</li>
+<li>type (string, optional) - possible values:<ul>
+<li>collection</li>
+<li>tour</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://www.historypin.org/en/api/projects/listing.json?limit=24&amp;page=1&amp;search=&amp;sort=popular&amp;type=collection">http://www.historypin.org/en/api/projects/listing.json?limit=24&amp;page=1&amp;search=&amp;sort=popular&amp;type=collection</a></p>
+<pre><code class="json">{
+    &quot;limit&quot; : 24,
+    &quot;count&quot; : 19399,
+    &quot;page&quot;  : 1,
+    &quot;search&quot;: &quot;&quot;,
+    &quot;sort&quot;  : &quot;popular&quot;,
+
+    &quot;results&quot;: [
+
+        {
+            &quot;node_type&quot;     : &quot;project&quot;,
+            &quot;class&quot;         : &quot;&quot;,
+            &quot;image&quot;         : &quot;//photos-cdn.historypin.org/projects/img/pid/227/type/project_image,banner,logo/dim/1920x2000/c/1428593449&quot;,
+
+            &quot;id&quot;            : 227,
+            &quot;type&quot;          : 0,
+            &quot;title&quot;         : &quot;Plumpton and East Chiltington in 1914 -1918&quot;,
+            &quot;slug&quot;          : &quot;plumpton-and-east-chiltington-in-1914&quot;,
+            &quot;desc&quot;          : &quot;This project was set up to mark the centenary of the outbreak of the First World War in Plumpton and East Chiltington&quot;,
+            &quot;position&quot;      : &quot;50.933918,-0.06144,11&quot;,
+            &quot;pins_count&quot;    : &quot;25&quot;,
+            &quot;sponsored&quot;     : {  },
+            &quot;times_viewed&quot;  : 123383,
+            &quot;on_explore&quot;    : 1,
+            &quot;classic_url&quot;   : &quot;/project/227-plumpton-and-east-chiltington-in-1914/&quot;,
+
+            &quot;edit_url&quot;      : &quot;/en/plumpton-and-east-chiltington-in-1914/collection/edit&quot;,
+
+            &quot;parent&quot;        : &quot;Heritage Lottery Funded Projects&quot;,
+
+            &quot;owner&quot;:
+            {
+                &quot;id&quot;    : &quot;58020&quot;,
+                &quot;url&quot;   : &quot;/channels/view/58020/&quot;,
+                &quot;name&quot;  : &quot;Plumpton and East Chiltington in 1914&quot;,
+                &quot;image&quot; : &quot;//resources-cdn.historypin.org/resources/avatars/200x200/avatar_5.png&quot;
+            },
+
+            &quot;images&quot; :
+            [
+                {
+                    &quot;id&quot;        : &quot;i.id&quot;,
+                    &quot;url&quot;       : &quot;//photos-cdn.historypin.org/projects/img/pid/227/type/project_image,banner,logo/dim/280x255/crop/1/c/1428593449&quot;
+                },
+                {
+                    &quot;id&quot;        : &quot;277808&quot;,
+                    &quot;url&quot;       : &quot;//photos-cdn.historypin.org/services/thumb/phid/277808/dim/280x225/crop/1/&quot;,
+                    &quot;pin_class&quot; : &quot;&quot;,
+                    &quot;media_url&quot; : &quot;&quot;
+                },
+                {
+                    &quot;id&quot;        : &quot;277807&quot;,
+                    &quot;url&quot;       : &quot;//photos-cdn.historypin.org/services/thumb/phid/277807/dim/280x225/crop/1/&quot;,
+                    &quot;pin_class&quot; : &quot;&quot;,
+                    &quot;media_url&quot; : &quot;&quot;
+                },
+                {
+                    &quot;id&quot;        : &quot;277806&quot;,
+                    &quot;url&quot;       : &quot;//photos-cdn.historypin.org/services/thumb/phid/277806/dim/280x225/crop/1/&quot;,
+                    &quot;pin_class&quot; : &quot;&quot;,
+                    &quot;media_url&quot; : &quot;&quot;
+                },
+                {
+                    &quot;id&quot;        : &quot;277805&quot;,
+                    &quot;url&quot;       : &quot;//photos-cdn.historypin.org/services/thumb/phid/277805/dim/280x225/crop/1/&quot;,
+                    &quot;pin_class&quot; : &quot;&quot;,
+                    &quot;media_url&quot; : &quot;&quot;
+                }
+            ],
+
+            &quot;users&quot; :
+            [
+
+            ]
+        },
+        ...
+    ]
+}
+</code></pre>
+
+<h2 id="places-specific-parameters">Places Specific Parameters</h2>
+<p>No sort params for places.</p>
+<ul>
+<li>id (integer) - country id to get all the places/areas in it.</li>
+<li>geo (string) - //TO-DO</li>
+<li>country (string) - possible values:<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://www.historypin.org/en/api/places/listing.json?limit=12&amp;page=1">http://www.historypin.org/en/api/places/listing.json?limit=12&amp;page=1</a></p>
+<pre><code class="json">{
+    &quot;limit&quot;     : 12,
+    &quot;count&quot;     : 5024,
+    &quot;page&quot;      : 1,
+    &quot;results&quot;   : [
+        {
+            &quot;id&quot;            : 110,
+            &quot;parent_id&quot;     : 0,
+            &quot;level&quot;         : &quot;0&quot;,
+            &quot;title&quot;         : &quot;Afghanistan&quot;,
+            &quot;slug&quot;          : &quot;afghanistan&quot;,
+            &quot;path&quot;          : &quot;afghanistan&quot;,
+
+            &quot;center&quot;        : &quot;33.9339750000,67.6828155000&quot;,
+            &quot;zoom&quot;          : &quot;5&quot;
+        },
+        ...
+    ]
+}
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
