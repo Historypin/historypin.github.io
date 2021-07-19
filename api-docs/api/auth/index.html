@@ -326,7 +326,7 @@ api_token = hmac.new(API_SECRET, BODY, hashlib.sha256).hexdigest()
 
 <h2 id="sending-requests">Sending Requests</h2>
 <h4 id="code-example">Code Example</h4>
-<pre><code class="python"> import hmac, hashlib, requests
+<pre><code class="python">import hmac, hashlib, requests
 from collections import OrderedDict
 
 from requests.api import post
