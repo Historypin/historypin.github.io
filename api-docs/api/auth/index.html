@@ -325,13 +325,38 @@ api_token = hmac.new(API_SECRET, BODY, hashlib.sha256).hexdigest()
 </code></pre>
 
 <h2 id="sending-requests">Sending Requests</h2>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>TBD</p>
-<p>...</p>
-<p>...</p>
-<p>...</p></div>
+<h4 id="code-example">Code Example</h4>
+<pre><code class="python"> import hmac, hashlib, requests
+from collections import OrderedDict
+
+from requests.api import post
+
+def api_call(path, querydata = {}, postdata = {}, api_key = '', api_secret = ''):
+    BASE = 'https://www.historypin.org/en/api/'
+
+    querydata['api_key'] = api_key
+    BODY = '&'.join(['{}={}'.format(k, v) for k, v in OrderedDict(sorted(querydata.items() + postdata.items() + [('api_path', path)])).items()])
+    api_token = hmac.new(api_secret, BODY, hashlib.sha256).hexdigest()
+    querystring = '&'.join(['{}={}'.format(k, v) for k, v in querydata.items()])
+    url = '{}{}?{}&api_token={}'.format(BASE, path, querystring, api_token)
+
+    return requests.post(url, data = postdata)
+
+
+response = api_call(
+    path = 'comments/post.json',
+    postdata = {
+        'item_id' : 1089880,
+        'copy': 'lorem ipsum dolor cit amet...',
+    },
+    api_key = 'e519f7e848189b352f7d8231e907bcb1b7e4360f1898d740f62b9fe041e61481',
+    api_secret = 'd883a3e32a7865c088ed2d97d1896e32',
+)
+
+print(response.content)
+</code></pre>
+		    
+	</div>
         </div>
 
         <footer class="col-md-12">
